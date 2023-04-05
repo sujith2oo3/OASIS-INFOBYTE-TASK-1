@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nine-to-fiver.com</title>
+    <link  rel="stylesheet" href="../prop/mainpage.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Trirong&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        body {
+            background-image: linear-gradient(90deg, #6699FF, #FFFFFF);
+            height: 2650px;
+            overflow-x: hidden;
+        }
+
+        #bg {
+            position: absolute;
+            height: 610px;
+            width: 100%;
+            z-index: -1;
+            opacity: 1;
+            top: 75px;
+            left: 0px;
+            background-repeat: no-repeat;
+            background-position: center/cover;
+            transform: translateZ(0px);
+
+        }
+
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: 35px;
+            margin-top: 0px;
+            margin-left: 83px;
+            color: rgb(252, 252, 252);
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            height: 75px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-image: linear-gradient(90deg, #181819, #373737);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.99;
+
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 15px 50px;
+            font-size: 17px;
+            font-family: 'Rubik Wet Paint', cursive;
+            color: lightsteelblue;
+        }
+
+        .right {
+            position: relative;
+            width: 40px;
+
+            left: 470px;
+        }
+
+        #navbar ul li a {
+            display: flex;
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-family: 'Trirong', serif;
+            padding: 63px;
+            font-weight: 800px;
+            text-decoration: none;
+
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+
+        }
+
+        #navbar ul li a .icon {
+            position: relative;
+            display: block;
+            line-height: 50px;
+            font-size: 28px;
+            text-align: center;
+            transition: 1s;
+            color: rgb(255, 255, 255);
+            /* color: orangered; */
+        }
+
+        .right ul li:hover a .icon {
+            transform: translateY(33px);
+
+        }
+
+        .right ul li a .items {
+            position: absolute;
+            left: 55px;
+            transition: 0.5s;
+            opacity: 0;
+            transform: translateY(0px);
+            color: rgb(255, 255, 255);
+        }
+
+        .right ul li:hover a .items {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+
+        /* .indicator{
+    position: absolute;
+    top: 36px;
+    left: 946px;
+    width: 48px;
+    height: 45px;
+    background: skyblue;
+    z-index: -1;
+    border-radius: 100%;
+    border: 6px solid whitesmoke;
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -22px;
+    height: 25px;
+    width: 25px;
+    background: transparent;
+    border-bottom-right-radius: 70px ;
+    box-shadow: 0px 10px 0 0 whitesmoke ;
+
+}
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 47px;
+    height: 25px;
+    width: 25px;
+    background: transparent;
+    border-bottom-left-radius: 70px ;
+    box-shadow: 0px 10px 0 0 whitesmoke ;
+
+} */
+        /* .right {
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+} */
+
+        .sin {
+            background-color: whitesmoke;
+            color: brown;
+            border-radius: 20px;
+            padding: 4px 31px;
+            margin: 19px 8px;
+            border: none;
+            cursor: pointer;
+            outline: no;
+            text-decoration: none;
+            color: brown;
+            font-weight: bold;
+            font-size: 15px;
+            position: relative;
+            top: -13px;
+        }
+
+        .sin:hover {
+            color: black;
+        }
+
+        .main {
+            display: flex;
+            margin-left: 250px;
+            margin-right: 250px;
+            height: 400px;
+            margin-top: 35px;
+
+        }
+
+        .main img {
+            position: absolute;
+            left: 810px;
+            width: 420px;
+            height: 350px;
+
+        }
+
+        .btn {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 390px;
+            left: 370px;
+            color: darkred;
+            background-color: whitesmoke;
+            padding: 6px 42px;
+            margin: 5px 45px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+        }
+
+        .but {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 440px;
+            left: 370px;
+            color: brown;
+            background-color: whitesmoke;
+            padding: 6px 31px;
+            margin: 5px 45px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+        }
+
+        .main h1 {
+            width: 500px;
+            font-size: 50px;
+            font-family: 'Raleway', sans-serif;
+
+
+        }
+
+        .main p {
+            display: inline-block;
+            position: absolute;
+            font-size: 15px;
+            top: 320px;
+            left: 470px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .popup {
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            height: 450px;
+            width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .popup-content img {
+            position: relative;
+            height: 95px;
+            width: 95px;
+            top: 25px;
+            left: 180px;
+        }
+
+        input {
+            margin: 20px;
+            display: block;
+            width: 250px;
+            padding: 6px;
+            position: relative;
+            top: 50px;
+            left: 90px;
+            border: 2px solid grey;
+
+        }
+
+        .lgn {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 290px;
+            left: 190px;
+            color: brown;
+            background-color: gold;
+            padding: 8px 40px;
+            margin: 5px 5px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            box-shadow: 6px 6px 29px -4px black;
+        }
+
+        .lgn a {
+            text-decoration: none;
+            color: brown;
+        }
+
+        .sgn {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            color: white;
+            background-color: gold;
+            top: 400px;
+            padding: 8px 40px;
+            margin: 0px 0px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            box-shadow: 6px 6px 29px -4px black;
+        }
+
+        .sgn a {
+            text-decoration: none;
+            color: brown;
+        }
+
+        .forg a {
+
+            color: black;
+
+        }
+
+        .forg {
+            display: inline-block;
+            position: absolute;
+            top: 350px;
+            left: 300px;
+        }
+
+        .not {
+            display: inline-block;
+            position: absolute;
+            top: 375px;
+            left: 35px;
+        }
+
+        .popup-content .cancel {
+            height: 25px;
+            width: 25px;
+            border-radius: 100%;
+            position: relative;
+            top: -255px;
+            left: 510px;
+            cursor: pointer;
+        }
+
+        .user-popup {
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: left;
+            align-items: center;
+
+        }
+
+        .user-popup-content {
+            height: 670px;
+            width: 320px;
+            background: white;
+            padding: 20px;
+
+            position: absolute;
+            top: 0;
+            /*animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-name: user;
+    animation-duration: 1s;
+    animation-timing-function: 0s;*/
+        }
+
+        /*@keyframes user {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 320px;
+    }
+}*/
+
+
+        .user-popup-content img {
+            height: 43px;
+            width: 43px;
+            border-radius: 100%;
+            position: relative;
+            left: -18px;
+            top: -18px;
+            cursor: pointer;
+        }
+
+        .please {
+            position: fixed;
+            font-size: 19px;
+            font-weight: bold;
+            font-family: 'Inter', sans-serif;
+            top: 7px;
+            left: 75px;
+
+        }
+
+        .user-form {
+            margin: 20px;
+            display: block;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+            top: 10px;
+            left: 0px;
+            transition: 3s;
+            opacity: 1;
+            font-size: 16px;
+            font-weight: 600;
+            color: darkgray;
+            /*animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-direction: inherit;
+    animation-fill-mode: forwards;
+    animation-name: key;
+    animation-duration: 2s;
+    animation-timing-function: 0s;*/
+
+        }
+
+        /*@keyframes key {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 250px;
+    }
+}
+*/
+        .user-but {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 640px;
+            left: 90px;
+            color: white;
+            background-color: gold;
+            padding: 6px 31px;
+            margin: 5px 45px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 6px 6px 29px -4px black;
+        }
+
+        .user-but a {
+            text-decoration: none;
+            color: brown;
+            font-weight: bold;
+        }
+
+        .check {
+            position: relative;
+            left: -120px;
+
+        }
+
+        .accept {
+            position: relative;
+            top: -47px;
+            left: 50px;
+        }
+
+        .worker-popup {
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .worker-popup-content {
+            height: 670px;
+            width: 320px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+
+        }
+
+        .worker-popup-content img {
+            height: 43px;
+            width: 43px;
+            border-radius: 100%;
+            position: relative;
+            left: -18px;
+            top: -18px;
+            cursor: pointer;
+        }
+
+        .worker-form {
+            margin: 20px;
+            display: block;
+            width: 250px;
+            padding: 13px;
+            border-radius: 10px;
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+
+        .check2 {
+            position: relative;
+            left: -120px;
+
+        }
+
+        .acc {
+            position: relative;
+            top: -47px;
+            left: 50px;
+        }
+
+        #worker-but {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 650px;
+            left: 85px;
+            color: white;
+            background-color: gold;
+            padding: 6px 31px;
+            margin: 5px 45px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 6px 6px 29px -4px black;
+        }
+
+        .worker-but a {
+            text-decoration: none;
+            color: brown;
+            font-weight: bold;
+        }
+
+        #name1 {
+            display: block;
+        }
+
+        /*#email1 {
+    display: none;
+}
+
+#password1 {
+    display: none;
+}
+
+#passwordcheck1 {
+    display: none;
+}
+
+#date1 {
+    display: none;
+}
+
+#Gender1 {
+    display: none;
+}
+
+#address1 {
+    display: none;
+}
+
+#checkbox1 {
+    display: none;
+}
+
+#user-accept {
+    display: none;
+}
+
+#user-login {
+    display: none;
+}*/
+
+
+
+
+
+        .second {
+            background-color: rgb(191, 189, 189);
+            display: flex;
+            position: relative;
+            margin-left: 380px;
+            margin-right: 380px;
+            height: 280px;
+            margin-top: 35px;
+            top: 38px;
+            border-radius: 10px;
+        }
+
+        .third {
+            background-color: white;
+            display: flex;
+            position: absolute;
+            top: 560px;
+            width: 54%;
+            margin-left: 350px;
+            margin-right: 350px;
+        }
+
+        .get {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 200px;
+            left: 60px;
+            color: white;
+            background-color: gold;
+            padding: 6px 31px;
+            margin: 5px 45px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+        }
+
+        .third h1 {
+            position: absolute;
+            left: 25px;
+            top: 15px;
+            width: 450px;
+            font-size: 35px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .third p {
+            display: inline-block;
+            position: relative;
+            font-size: 15px;
+            top: 123px;
+            left: 47px;
+            right: 450px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .third img {
+            display: inline-block;
+            position: relative;
+            left: 180px;
+        }
+
+        .forth {
+            display: flex;
+            margin-left: 250px;
+            margin-right: 450px;
+            height: 400px;
+            margin-top: 65px;
+        }
+
+        .work {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 1190px;
+            left: 790px;
+            color: white;
+            background-color: whitesmoke;
+            padding: 6px 31px;
+            margin: 5px 45px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+        }
+
+        .forth h6 {
+            position: absolute;
+            left: 735px;
+            top: 900px;
+            width: 450px;
+        }
+
+        .forth h1 {
+            position: absolute;
+            font-size: 30px;
+            left: 735px;
+            top: 929px;
+            width: 450px;
+            font-weight: bolder;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .forth p {
+            position: absolute;
+            left: 735px;
+            top: 1030px;
+            width: 450px;
+            font-size: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .fifth {
+            display: flex;
+            position: relative;
+            top: 90px;
+            margin-left: 220px;
+            margin-right: 220px;
+            height: 300px;
+            width: 1000px;
+
+        }
+
+        .fifth img {
+
+            width: 100%;
+        }
+
+        .sixth {
+            display: flex;
+            position: relative;
+            margin-left: 280px;
+            margin-right: 350px;
+            height: 400px;
+            top: 190px;
+            margin-top: 25px;
+            background-color: white;
+        }
+
+        .graph {
+            position: absolute;
+            top: 0px;
+            left: 80px;
+            width: 280px;
+            height: 170px;
+            opacity: 0.9;
+        }
+
+        .sixth h1 {
+            position: absolute;
+            top: 210px;
+            font-size: 30px;
+            width: 400px;
+            left: 90px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sign {
+            display: inline-block;
+            position: absolute;
+            word-wrap: unset;
+            top: 350px;
+            left: 80px;
+            color: white;
+            background-color: gold;
+            padding: 6px 31px;
+            margin: 5px 45px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+        }
+
+        .sixth p {
+            position: absolute;
+            top: 310px;
+            left: 130px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+        }
+
+        .step {
+            position: absolute;
+            left: 480px;
+            height: 400px;
+        }
+
+        footer {
+            position: absolute;
+            top: 2400px;
+            height: 150px;
+            width: 100%;
+        }
+
+        .foot a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .foot a:hover {
+            color: white;
+        }
+
+        .end {
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            position: relative;
+            width: 50%;
+            top: -10px;
+            left: 540px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .foot {
+            height: 50px;
+            width: 130px;
+            margin: 10px;
+        }
+
+        .sin a {
+            text-decoration: none;
+            color: brown;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 15px 7px;
+            margin: 0px 0px;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: darkred;
+            font-weight: bold;
+        }
+
+        .but a {
+            text-decoration: none;
+            color: darkred;
+            font-weight: bold;
+        }
+
+        .work a {
+            text-decoration: none;
+            color: darkred;
+            font-weight: bold;
+        }
+
+        .get a {
+            text-decoration: none;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        .sign a {
+            text-decoration: none;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        .titl {
+            display: inline-block;
+            position: relative;
+            top: 100px;
+            left: 120px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .copy {
+            display: inline-block;
+            position: relative;
+            top: 170px;
+            left: -60px;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="logo">
+            <h1>NINE-TO-FIVE</h1>
+
+        </div>
+        <div class="right ">
+            <ul>
+                <li class="active list">
+                    <a href="C:\Users\SUJITH\Desktop\exeed\backend\host\views\main page.html">
+                        <span class="items">Home</span>
+                        <span class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="C:\Users\SUJITH\Desktop\exeed\about us.html">
+                        <span class="items">About</span>
+                        <span class="icon">
+                            <ion-icon name="contacts"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="C:\Users\SUJITH\Desktop\exeed\contact us.html">
+                        <span class="items">Contact us</span>
+                        <span class="icon">
+                            <ion-icon name="call"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="items" id="login1">Login</span>
+                        <span class="icon" id="login">
+                            <ion-icon name="log-in"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </nav>
+    <section class="main">
+        <h1> THE BEST PLATFORM TO GET THINGS DONE</h1>
+        <p>one step far from your work to be done</p>
+        <img src="logo.png">
+        <button class="btn" id="user-main"> USER sign up </button>
+        <button class="but" id="worker-main"> WORKER sign up</button>
+
+    </section>
+    <section class="popup">
+        <div class="popup-content">
+            <img src="user.png" alt="user">
+            <form action="">
+                <div class="cont-inp">
+                    <input type="text" name="name" id="name" placeholder="Enter your username">
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                </div>
+            </form>
+            <button class="lgn"><a href=""> Login</a></button>
+            <button class="sgn"><a href=""> Sign up</a></button>
+            <p class="forg"><a href="">forgot your password?</a></p>
+            <p class="not">NOT A USER?</p>
+            <img class="cancel" src="cancel.png" alt="cancel">
+        </div>
+    </section>
+    <section class="user-popup">
+        <div class="user-popup-content">
+            <img class="cross" src="cross.png" alt="cross">
+            <p class="please">please signup to continue</p>
+            <form action="">
+                <div class="cont-inp">
+                    <input class="user-form" type="text" name="name1" id="name1" placeholder="Enter your username">
+                    <input class="user-form" type="email" name="email" id="email1" placeholder="Enter your email">
+                    <input class="user-form" type="password" name="password1" id="password1"
+                        placeholder="Enter your password">
+                    <input class="user-form" type="password" name="password" id="passwordcheck1"
+                        placeholder="Re-Enter your password">
+                    <input class="user-form dob" type="date" name="date" id="date1" placeholder="DD/MM/YYYY">
+                    <select class="user-form gender" name="Gender" id="Gender1">
+                        <option disabled selected>select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">others</option>
+                    </select>
+                    <textarea class="user-form" name="address" id="address1" placeholder="Address"></textarea>
+                    <input class="user-form check" type="checkbox" name="checkbox" id="checkbox1">
+                </div>
+            </form>
+            <p class="accept" id="user-accept">i hereby accept all terms and conditons </p>
+            <button class="user-but" id="user-login"><a href=""> create</a></button>
+        </div>
+    </section>
+    <section class="worker-popup">
+        <div class="worker-popup-content">
+            <img class="cross2" src="cross.png" alt="cross2">
+            <p class="please">please signup to continue</p>
+            <form action="">
+                <div class="cont-inp">
+                    <input class="worker-form" type="text" name="name" id="name2" placeholder="Enter your username">
+                    <input class="worker-form" type="email" name="email" id="email2" placeholder="Enter your email">
+                    <input class="worker-form" type="password" name="password" id="password2"
+                        placeholder="Enter your password">
+                    <input class="worker-form" type="password" name="password" id="passwordcheck2"
+                        placeholder="Re-Enter your password">
+                    <input class="worker-form dob" type="date" name="date" id="date2" placeholder="DD/MM/YYYY">
+                    <select class="worker-form gender" name="Gender" id="Gender2">
+                        <option disabled selected>select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">others</option>
+                    </select>
+                    <select class="worker-form profession" name="profession" id="profession2">
+                        <option disabled selected>select occupation</option>
+                        <option value="plumber">plumber</option>
+                        <option value="carpenter">carpenter</option>
+                        <option value="electrician">electrician</option>
+                    </select>
+                    <input class="worker-form" type="tel" name="phone number" id="phone number2"
+                        placeholder="phone number">
+                    <input class="worker-form check2" type="checkbox" name="checkbox" id="checkbox2" i here by accept
+                        all terms and conditions.>
+                </div>
+            </form>
+            <p class="acc">i hereby accept all terms and conditons </p>
+            <button id="worker-but"><a href=""> create</a></button>
+        </div>
+
+    </section>
+    <section class="second">
+        <p>hi</p>
+    </section>
+    <section class="third">
+        <h1> ALL KINDS OF HOUSEHOULD WORKS</h1>
+        <p>any kind of household problems!..<br> dont get tensed, will be solved ASAP<br> with experienced worker around
+            you</p>
+        <img src="all household works.png">
+        <button class="get"><a href=""> How to get</a></button>
+    </section>
+    <section class="forth">
+        <img src="Screenshot (89).png">
+        <h1> NEED A PART TIME<br> WORK?</h1>
+        <h6>WORKER PROFILE</h6>
+        <p>if you require any part time job<br> based on your work profile sign up <br>and create a profile with all
+            details carefully and get notified</p>
+        <button class="work" id="work-btn"><a href=""> WORKER SIGN UP</a></button>
+    </section>
+    <section class="fifth">
+        <img src="Screenshot (91).png">
+    </section>
+    <section class="sixth">
+        <img class="graph" src="Screenshot (112).png">
+        <h1>Get facilitated <br>with single step</h1>
+        <p>tap to sign up now!</p>
+        <button class="sign"><a href="C:\Users\SUJITH\Desktop\exeed\user.html"> sign up now</a></button>
+        <img class="step" src="Screenshot (93).png" alt="">
+    </section>
+
+    <footer>
+        <hr>
+        <div class="titl">
+            <h2>NINE-TO-FIVER</h2>
+        </div>
+        <div class="copy">
+            2021 &copy;Lando<br> all rights reserved.
+        </div>
+        <div class="end">
+            <div class="foot"><a href="C:\Users\SUJITH\Desktop\exeed\backend\host\views\main page.html">Home</a></div>
+            <div class="foot"><a href="C:\Users\SUJITH\Desktop\exeed\about us.html">About us</a></div>
+            <div class="foot"><a href="C:\Users\SUJITH\Desktop\exeed\contact us.html">Contact</a></div>
+            <div class="foot"><a href="">Pricing</a></div>
+            <div class="foot"><a href="">Facebook</a></div>
+            <div class="foot"><a href="">Instagram</a></div>
+            <div class="foot"><a href="">Twitter</a></div>
+            <div class="foot"><a href="">Linkedin</a></div>
+            <div class="foot"><a href="">Privacy policy</a></div>
+            <div class="foot"><a href="">Terms of service</a></div>
+        </div>
+
+    </footer>
+    <!--<script src="mainpage.js"></script>-->
+    <script>
+        document.getElementById("login").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "flex"
+        })
+        document.querySelector(".cancel").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none"
+        })
+        document.getElementById("login1").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "flex"
+        })
+        document.querySelector(".cancel").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none"
+        })
+        document.getElementById("user-main").addEventListener("click", function () {
+            document.querySelector(".user-popup").style.display = "flex"
+        })
+        document.querySelector(".cross").addEventListener("click", function () {
+            document.querySelector(".user-popup").style.display = "none"
+        })
+        document.getElementById("worker-main").addEventListener("click", function () {
+            document.querySelector(".worker-popup").style.display = "flex"
+        })
+        document.querySelector(".cross2").addEventListener("click", function () {
+            document.querySelector(".worker-popup").style.display = "none"
+        })
+        /*$("#worker-but").click(function(){
+            alert("successfully submitted")
+        })*/
+        document.getElementById("work-btn").addEventListener("click", function () {
+            document.querySelector(".worker-popup").style.display = "flex"
+        })
+        document.querySelector(".cross2").addEventListener("click", function () {
+            document.querySelector(".worker-popup").style.display = "none"
+        })
+        document.querySelector('#worker-but').addEventListener("click", function () {
+            alert("successfully submitted")
+        })
+        document.querySelector('.user-but').addEventListener("click", function () {
+            alert("successfully submitted")
+        })
+
+        /*
+        var enter = document.querySelector("#name1");
+        
+        enter.addEventListener("keypress",function (e){
+            document.querySelector("#email1").style.display="block"
+        })
+        
+        document.querySelector("#email1").addEventListener("keypress",function(d){
+            document.querySelector("#password1").style.display="block"
+        })
+        document.querySelector("#password1").addEventListener("keypress",function(a){
+            document.querySelector("#passwordcheck1").style.display="block"
+        })
+        document.querySelector("#passwordcheck1").addEventListener("keypress",function(b){
+            document.querySelector("#date1").style.display="block"
+        })
+        document.querySelector("#date1").addEventListener("click",function(c){
+            document.querySelector("#Gender1").style.display="block"
+        })
+        document.querySelector("#Gender1").addEventListener("click",function(f){
+            document.querySelector("#address1").style.display="block"
+        })
+        document.querySelector("#address1").addEventListener("keypress",function(g){
+            document.querySelector("#checkbox1").style.display="block"
+            document.querySelector("#user-accept").style.display="block"    
+            document.querySelector("#user-login").style.display="block"    
+        
+        })
+        let bg = document.getElementById("bg")
+        window.addEventListener('scroll',function(){
+        
+            var k = window.setInterval(function() {
+                var i=0
+                if (i >= 10) {
+                  clearInterval(k);
+                } else {
+                  bg.style.opacity = i / 10;
+                  i++;
+                }
+              }, 100);
+        
+        
+        });*/
+
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+</body>
+
+
+
+</html>
